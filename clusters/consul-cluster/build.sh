@@ -1,2 +1,2 @@
 #!/bin/bash
-../../alpine-consul-ui/build.sh
+alpine-consul-ui/build.sh

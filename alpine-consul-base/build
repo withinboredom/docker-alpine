@@ -1,1 +1,4 @@
-docker build -t smebberson/alpine-consul-base /vagrant/alpine-consul-base
+#!/bin/bash
+
+docker build -t withinboredom/alpine-consul-base /vagrant/alpine-consul-base
+docker push withinboredom/alpine-consul-base

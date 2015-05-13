@@ -1,7 +1,7 @@
-FROM smebberson/alpine-base
-MAINTAINER Scott Mebberson <scott@scottmebberson.com>
+FROM withinboredom/alpine-base
+MAINTAINER Robert Landers <landers.robert@gmail.com>
 
-ENV CONSUL_VERSION=0.5.0 GOMAXPROCS=2
+ENV CONSUL_VERSION=0.5.0 GOMAXPROCS=2 DATACENTER=local MASTER=""
 
 # Download and install Consul
 RUN apk add --update go git gcc musl-dev && \
@@ -11,10 +11,7 @@ RUN apk add --update go git gcc musl-dev && \
     rm -rf /go && \
     apk del go git gcc musl-dev && \
     rm -rf /var/cache/apk/* && \
-    addgroup consul && \
-    adduser -D -G consul consul && \
-    mkdir -p /data/consul && \
-    chown -R consul:consul /data/consul
+    mkdir -p /data/consul
 
 # Add the files
 ADD root /

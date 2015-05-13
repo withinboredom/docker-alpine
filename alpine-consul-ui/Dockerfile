@@ -1,5 +1,5 @@
-FROM smebberson/alpine-consul
-MAINTAINER Scott Mebberson <scott@scottmebberson.com>
+FROM withinboredom/alpine-consul
+MAINTAINER Robert Landers <landers.robert@gmail.com>
 
 ENV CONSUL_VERSION=0.5.0
 
@@ -9,7 +9,6 @@ RUN cd /tmp && \
     unzip consul_web_ui.zip && \
     mkdir /ui && \
     mv dist/* /ui && \
-    chown -R consul:consul /ui && \
     rm consul_web_ui.zip
 
 # Add the files

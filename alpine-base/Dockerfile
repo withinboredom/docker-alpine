@@ -1,5 +1,5 @@
 FROM alpine:3.1
-MAINTAINER Scott Mebberson <scott@scottmebberson.com>
+MAINTAINER Robert Landers <landers.robert@gmail.com>
 
 # Add commonly used packages
 RUN apk add --update bind-tools && \

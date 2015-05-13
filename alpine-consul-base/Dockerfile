@@ -1,4 +1,4 @@
-FROM smebberson/alpine-consul
+FROM withinboredom/alpine-consul
 MAINTAINER Scott Mebberson <scott@scottmebberson.com>
 
 # Add the files

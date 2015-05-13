@@ -1,6 +1,10 @@
 #!/usr/bin/with-contenv sh
 
-# Bind to the external (LAN) IP
-BIND=`getent hosts ${HOSTNAME} | awk '{print $1}'`
+if [ -z "$MASTER" ]
+then
+	next="-bootstrap"
+else
+	next="-join=$MASTER"
+fi
 
-exec s6-setuidgid consul consul agent -config-dir /etc/consul.d/bootstrap -bind ${BIND};
+exec consul agent -config-dir /etc/consul.d/bootstrap $next -dc $DATACENTER;

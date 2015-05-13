@@ -1,4 +1,4 @@
-FROM withinboredom/alpine-consul
+FROM wickedmonkey/consul-server-bare
 MAINTAINER Robert Landers <landers.robert@gmail.com>
 
 ENV CONSUL_VERSION=0.5.0

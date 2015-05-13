@@ -1,4 +1,4 @@
-FROM withinboredom/alpine-base
+FROM wickedmonkey/base-image
 MAINTAINER Robert Landers <landers.robert@gmail.com>
 
 ENV CONSUL_VERSION=0.5.0 GOMAXPROCS=2 DATACENTER=local MASTER=""

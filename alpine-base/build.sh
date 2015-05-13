@@ -1,3 +1,3 @@
 #!/bin/bash
-docker build -t wickedmonkey/base-image /vagrant/alpine-base
+docker build -t wickedmonkey/base-image alpine-base
 #docker push withinboredom/alpine-base
